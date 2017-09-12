@@ -15,11 +15,9 @@ class LSPTest
      */
     public function test(): void
     {
-        $shapes = [
-            new Square(10, 20)
-        ];
-
-        $areas = new AreaCalculator($shapes);
-        echo $areas->sum();
+        $rectangle = RectangleFactory::create(true);
+        $rectangle->setHeight(5);
+        $rectangle->setWidth(10);
+        echo $rectangle->area();
     }
 }

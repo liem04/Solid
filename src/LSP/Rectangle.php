@@ -13,38 +13,27 @@ class Rectangle implements ShapeInterface
     /**
      * @var float
      */
-    private $width;
+    protected $width;
 
     /**
      * @var float
      */
-    private $height;
+    protected $height;
 
     /**
-     * Rectangle constructor.
      * @param float $width
-     * @param float $height
      */
-    public function __construct($width, $height)
+    public function setWidth(float $width): void
     {
         $this->width = $width;
+    }
+
+    /**
+     * @param float $height
+     */
+    public function setHeight(float $height): void
+    {
         $this->height = $height;
-    }
-
-    /**
-     * @return float
-     */
-    public function getWidth(): float
-    {
-        return $this->width;
-    }
-
-    /**
-     * @return float
-     */
-    public function getHeight(): float
-    {
-        return $this->height;
     }
 
     /**

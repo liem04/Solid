@@ -11,14 +11,20 @@ class Square extends Rectangle
 {
 
     /**
-     * @return float
-     * @throws \InvalidArgumentException
+     * @param float $width
      */
-    public function area(): float
+    public function setWidth(float $width): void
     {
-        if ($this->getHeight() !== $this->getWidth()) {
-            throw new \InvalidArgumentException('this is not square');
-        }
-        return $this->getHeight() ** 2;
+        $this->width = $width;
+        $this->height = $width;
+    }
+
+    /**
+     * @param float $height
+     */
+    public function setHeight(float $height): void
+    {
+        $this->height = $height;
+        $this->width = $height;
     }
 }
