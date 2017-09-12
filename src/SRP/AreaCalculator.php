@@ -2,6 +2,7 @@
 
 namespace Solid\SRP;
 
+
 /**
  * Class AreaCalculator
  * @package Solid\SRP
@@ -28,12 +29,16 @@ class AreaCalculator
      */
     public function sum(): float
     {
-        $sum = 0.0;
+        $area = [];
         foreach ($this->shapes as $shape) {
-            $sum += $shape->area();
+            if ($shape instanceof Square) {
+                $area[] = $shape->getLength() ** 2;
+            } elseif ($shape instanceof Circle) {
+                $area[] = M_PI * $shape->getRadius() ** 2;
+            }
         }
 
-        return $sum;
+        return array_sum($area);
     }
 
     /**

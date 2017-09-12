@@ -1,11 +1,11 @@
 <?php
 
-namespace Solid\SRP;
+namespace Solid\OCP;
 
 
 /**
  * Class SumCalculatorOutputter
- * @package Solid\SRP
+ * @package Solid\OCP
  */
 class SumCalculatorOutputter
 {

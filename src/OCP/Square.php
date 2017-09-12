@@ -1,13 +1,13 @@
 <?php
 
-namespace Solid\SRP;
+namespace Solid\OCP;
 
 
 /**
  * Class Square
- * @package Solid\SRP
+ * @package Solid\OCP
  */
-class Square
+class Square implements ShapeInterface
 {
 
     /**
@@ -30,5 +30,13 @@ class Square
     public function getLength(): float
     {
         return $this->length;
+    }
+
+    /**
+     * @return float
+     */
+    public function area(): float
+    {
+        return $this->length ** 2;
     }
 }

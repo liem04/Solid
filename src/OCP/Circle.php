@@ -1,13 +1,13 @@
 <?php
 
-namespace Solid\SRP;
+namespace Solid\OCP;
 
 
 /**
  * Class Circle
- * @package Solid\SRP
+ * @package Solid\OCP
  */
-class Circle
+class Circle implements ShapeInterface
 {
 
     /**
@@ -27,16 +27,16 @@ class Circle
     /**
      * @return float
      */
-    public function area(): float
+    public function getRadius(): float
     {
-        return M_PI * $this->radius ** 2;
+        return $this->radius;
     }
 
     /**
      * @return float
      */
-    public function getRadius(): float
+    public function area(): float
     {
-        return $this->radius;
+        return M_PI * $this->radius ** 2;
     }
 }
