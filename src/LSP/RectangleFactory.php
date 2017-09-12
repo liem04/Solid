@@ -2,6 +2,7 @@
 
 namespace Solid\LSP;
 
+
 /**
  * Class RectangleFactory
  * @package LSP
