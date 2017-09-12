@@ -26,6 +26,7 @@ class SumCalculatorOutputter
 
     /**
      * @return string
+     * @throws AreaCalculatorInvalidShapeException
      */
     public function outputString(): string
     {
@@ -39,6 +40,7 @@ class SumCalculatorOutputter
 
     /**
      * @return string
+     * @throws AreaCalculatorInvalidShapeException
      */
     public function outputJson(): string
     {

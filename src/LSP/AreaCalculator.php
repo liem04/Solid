@@ -28,7 +28,7 @@ class AreaCalculator
      * @return float
      * @throws AreaCalculatorInvalidShapeException
      */
-    public function sum()
+    public function sum(): float
     {
         $sum = 0.0;
         foreach ($this->shapes as $shape) {

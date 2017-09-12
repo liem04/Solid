@@ -7,36 +7,18 @@ namespace Solid\LSP;
  * Class Square
  * @package Solid\LSP
  */
-class Square implements ShapeInterface
+class Square extends Rectangle
 {
 
     /**
-     * @var  float
-     */
-    protected $length;
-
-    /**
-     * Square constructor.
-     * @param float $length
-     */
-    public function __construct(float $length)
-    {
-        $this->length = $length;
-    }
-
-    /**
      * @return float
-     */
-    public function getLength(): float
-    {
-        return $this->length;
-    }
-
-    /**
-     * @return float
+     * @throws \InvalidArgumentException
      */
     public function area(): float
     {
-        return $this->length ** 2;
+        if ($this->getHeight() !== $this->getWidth()) {
+            throw new \InvalidArgumentException('this is not square');
+        }
+        return $this->getHeight() ** 2;
     }
 }
