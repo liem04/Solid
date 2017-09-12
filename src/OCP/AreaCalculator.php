@@ -26,12 +26,17 @@ class AreaCalculator
 
     /**
      * @return float
+     * @throws AreaCalculatorInvalidShapeException
      */
     public function sum(): float
     {
         $sum = 0.0;
         foreach ($this->shapes as $shape) {
-            $sum += $shape->area();
+            if ($shape instanceof ShapeInterface) {
+                $sum += $shape->area();
+                continue;
+            }
+            throw new AreaCalculatorInvalidShapeException('invalid shape');
         }
 
         return $sum;

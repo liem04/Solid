@@ -18,7 +18,8 @@ class OCPTest
     {
         $shapes = [
             new Circle(2.0),
-            new Square(4.2)
+            new Square(4.2),
+            new Rectangle(10.0, 20.0)
         ];
 
         $areas = new AreaCalculator($shapes);

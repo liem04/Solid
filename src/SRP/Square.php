@@ -19,7 +19,7 @@ class Square
      * Square constructor.
      * @param float $length
      */
-    public function __construct($length)
+    public function __construct(float $length)
     {
         $this->length = $length;
     }
